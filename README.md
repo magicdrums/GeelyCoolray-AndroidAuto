@@ -1,6 +1,12 @@
 # GeelyCoolray-AndroidAuto
 Install Apks on Radio Geely Coolray version 05.07.06000.h50.00032
 
+# DISCLAIMER
+La licencia de este repositorio es GNU GPL, si no esta familiarizado con el OpenSource este Disclaimer es para aclarar puntos
+1. El soporte de los software lo da la comunidad que mantiene este repositorio (Es publico cualquiera puede modificarlo)
+2. En caso de fallas no puede culpar a este repositorio o a sus mantenedores ya que para eso esta esta documentacion
+3. **Las pruebas, instalaciones y demas son realizadas bajo la responsabilidad de cada persona.**
+
 # Pasos
 1. Descargar este Repositorio, en la parte superior dice "Code/Codigo" ahi dentro se puede descargar el ZIP Completo
 2. Formatear el pendrive en Formato "FAT32", esto es importante porque si no la radio no lee el USB
