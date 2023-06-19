@@ -29,7 +29,6 @@ La licencia de este repositorio es GNU GPL, si no esta familiarizado con el Open
 - Si quieres Desinstalar es posible hacerlo, pero como recomendacion vuelve la radioa fabrica desde el menu de configuracion
 
 # APKS Incluidos
-- AutoKit.apk: App para conectar Apple Car Play
 - AA.apk: Android Auto
 - BackButton.apk: Boton volver atras para que aparezca siempre encima del todo en Android Auto necesario ya que se ejecuta en pantalla completa
 
