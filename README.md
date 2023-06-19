@@ -20,6 +20,9 @@ La licencia de este repositorio es GNU GPL, si no esta familiarizado con el Open
 8. Esperar que la radio Reinicie (3 Veces) e instale todo
 9.  LISTO! a disfrutar de Android Auto!
 
+## Video Explicativo
+[![Apk's Geely Coolray](https://i9.ytimg.com/vi/v69KjKH5K_Q/mq1.jpg?sqp=CLiOwqQG-oaymwEmCMACELQB8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGEMgRihlMA8%3D&rs=AOn4CLDGjhCVwRV7zYGM3OlYNFyLj1m8UA&retry=4)](https://youtu.be/v69KjKH5K_Q "Apk's Geely Coolray")
+
 # NOTAS
 - Es posible colocar mas APKS que quieras solo sumalas en el paso 4
 - Yo aun estoy probando comop conectar Android Auto en modo Bluetooth, pero con cable funciona perfecto
