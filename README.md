@@ -1,25 +1,27 @@
 # GeelyCoolray-AndroidAuto
-Install Apks on Radio Geely Coolray version 05.07.06000.h50.00032
+Install Android Auto and Backbutton on Radio Geely Coolray version 05.07.06000.h50.00032
 
 # DISCLAIMER
 La licencia de este repositorio es GNU GPL, si no esta familiarizado con el OpenSource este Disclaimer es para aclarar puntos
 1. El soporte de los software lo da la comunidad que mantiene este repositorio (Es publico cualquiera puede modificarlo)
 2. En caso de fallas no puede culpar a este repositorio o a sus mantenedores ya que para eso esta esta documentacion
-3. **Las pruebas, instalaciones y demas son realizadas bajo la responsabilidad de cada persona.**
+3. La instalacion de aplicaciones la hice como a mi me servia la comparto para que la usen como estimen conveniente
+4. **Las pruebas, instalaciones y demas son realizadas bajo la responsabilidad de cada persona.**
 
 # Pasos
 1. Descargar este Repositorio, en la parte superior dice "Code/Codigo" ahi dentro se puede descargar el ZIP Completo
 2. Formatear el pendrive en Formato "FAT32", esto es importante porque si no la radio no lee el USB
 3. Descomprimir el ZIP
 4. Copiar y Pegar todos los archivos dentro del Pendrive USB
+   1. Modificacion de done.sh, si sumaste mas apk's
 5. Una vez copiados, ir al Vehiculo
 6. IMPORTANTE!!!!, Encender en ACC sin presionar el freno, solo que la radio encienda
 7. IMPORTANTE!!!!, Enchufar el Pendrive USB en el puerto del lado del copiloto, si se hace en el otro hay que iniciar de nuevo todo el proceso (Me paso...)
 8. Esperar que la radio Reinicie (3 Veces) e instale todo
-9. LISTO! a disfrutar de Android Auto y tus APPS!
+9.  LISTO! a disfrutar de Android Auto!
 
 # NOTAS
-- Es posible sacar APKS que no quieras solo sacalas en el paso 4
+- Es posible colocar mas APKS que quieras solo sumalas en el paso 4
 - Yo aun estoy probando comop conectar Android Auto en modo Bluetooth, pero con cable funciona perfecto
 - Si quieres Desinstalar es posible hacerlo, pero como recomendacion vuelve la radioa fabrica desde el menu de configuracion
 
@@ -27,16 +29,10 @@ La licencia de este repositorio es GNU GPL, si no esta familiarizado con el Open
 - AutoKit.apk: App para conectar Apple Car Play
 - AA.apk: Android Auto
 - BackButton.apk: Boton volver atras para que aparezca siempre encima del todo en Android Auto necesario ya que se ejecuta en pantalla completa
-- gmaps.apk: App nativa de Google Maps
-- GPStether.apk: App para conectar la radio a GPS y usar con Waze y Google Maps nativamente
-- Netflix.apk: App de Netflix, si se puede instalar y usarlo
-- newpipeOKA.apk: App para Youtube sin anuncios
-- Waze.apk: Waze...
-- WifiManager.apk: App para controlar el Wifi de la radio que permite conectar tu telefono como Router Wifi
-- YouTubeVanced.apk: Youtube Mejorado
 
-# Parte Tecnica
-Los APKS son las aplicaciones que son posibles instalarlas en cualquier sistema Android Compatible, lo imporatante es saber que la app que estas instalando le sirva a tu sistema android en este caso la version 4 de Androis es la que tiene nuestra radio.
+
+# Parte Tecnica (y Fome xD)
+Los APKS son las aplicaciones que son posibles instalarlas en cualquier sistema Android Compatible, lo imporatante es saber que la app que estas instalando le sirva a tu sistema android en este caso la version 4 de Android es la que tiene nuestra radio.
 
 El script que realiza el proceso es done.sh
 ```shell
@@ -46,16 +42,8 @@ export PATH=/sbin:/system/sbin:/system/xbin:/system/bin
 mount -o remount,rw /system /system
 
 #Install apks
-pm install -rtdg /mnt/udisk2/AutoKit.apk
 pm install -rtdg /mnt/udisk2/AA.apk
 pm install -rtdg /mnt/udisk2/BackButton.apk
-pm install -rtdg /mnt/udisk2/gmaps.apk
-pm install -rtdg /mnt/udisk2/GPStether.apk
-pm install -rtdg /mnt/udisk2/Netflix.apk
-pm install -rtdg /mnt/udisk2/newpipeOKA.apk
-pm install -rtdg /mnt/udisk2/Waze.apk
-pm install -rtdg /mnt/udisk2/WifiManager.apk
-pm install -rtdg /mnt/udisk2/YouTubeVanced.apk
 
 #End with reboot
 sync
