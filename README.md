@@ -29,8 +29,9 @@ La licencia de este repositorio es GNU GPL, si no esta familiarizado con el Open
 - Si quieres Desinstalar es posible hacerlo, pero como recomendacion vuelve la radioa fabrica desde el menu de configuracion
 
 # APKS Incluidos
-- AA.apk: Android Auto
-- BackButton.apk: Boton volver atras para que aparezca siempre encima del todo en Android Auto necesario ya que se ejecuta en pantalla completa
+- AA.apk: Android Auto.
+- BackButton.apk: Boton volver atras para que aparezca siempre encima del todo en Android Auto necesario ya que se ejecuta en pantalla completa.
+- homebutton.apk: Aplicacion para "mapear" botonnes y acciones de botones del volante, hasta el momento pude "mapear" el boton del volante que no tiene ningun icono para abrir Android Auto.
 
 
 # Parte Tecnica (y Fome xD)
