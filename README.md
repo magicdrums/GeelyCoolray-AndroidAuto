@@ -1,3 +1,5 @@
+Comprame un cafe! :-D [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S3NKLZ2)
+
 # GeelyCoolray-AndroidAuto
 Install Android Auto and Backbutton on Radio Geely Coolray version 05.07.06000.h50.00032
 
