@@ -30,6 +30,7 @@ La licencia de este repositorio es GNU GPL, si no esta familiarizado con el Open
 
 # APKS Incluidos
 - AA.apk: Android Auto.
+- AutoKit.apk: Carplay.
 - BackButton.apk: Boton volver atras para que aparezca siempre encima del todo en Android Auto necesario ya que se ejecuta en pantalla completa.
 - homebutton.apk: Aplicacion para "mapear" botonnes y acciones de botones del volante, hasta el momento pude "mapear" el boton del volante que no tiene ningun icono para abrir Android Auto.
 
