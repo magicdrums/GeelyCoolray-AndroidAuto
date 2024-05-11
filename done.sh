@@ -5,6 +5,7 @@ mount -o remount,rw /system /system
 
 #Install apks
 pm install -rtdg /mnt/udisk2/AA.apk
+pm install -rtdg /mnt/udisk2/Carplay.apk
 pm install -rtdg /mnt/udisk2/AutoKit.apk
 pm install -rtdg /mnt/udisk2/BackButton.apk
 pm install -rtdg /mnt/udisk2/homebutton.apk
