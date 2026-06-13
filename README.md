@@ -26,6 +26,42 @@ Para **iPhone / Apple CarPlay**, la app correcta es **AutoKit** de Carlinkit (`A
 
 ---
 
+## Compatibilidad con otras radios
+
+Este paquete está **probado** en el Geely Coolray clásico con **GKUI**, **Android 4.x** y firmware `05.07.06000.h50.00032`. No es un instalador universal para cualquier Geely.
+
+### ¿Por qué no funciona en todas las radios?
+
+El método depende de dos cosas muy específicas:
+
+1. **Exploit del Carlink Kit** — la carpeta `b832bc61472727635baffcf25dd28e9f239273e2/` hace que la radio ejecute `done.sh` al insertar el USB. Si la radio no reconoce esa estructura, el pendrive no instalará nada.
+2. **APKs para Android 4** — las apps incluidas están pensadas para **Android 4.3/4.4**. En radios con Android más nuevo harían falta otras versiones.
+
+### Tabla por variante de Coolray
+
+| Variante | Radio / SO | ¿Compatible con este repo? | Notas |
+|----------|------------|----------------------------|-------|
+| **Coolray clásico** (2020–2023 aprox.) | GKUI, Android 4.3, firmware `…00032` | **Sí** | Caso probado en este proyecto |
+| **Otros Coolray misma generación** | GKUI, Android 4.3, firmware `…84`, `…93`, `…96`, `…20`, `…22`, `…32` | **Probablemente sí** | [coolrayinfotainment/customs](https://github.com/coolrayinfotainment/customs) lista esos firmwares |
+| **Coolray 2024 facelift** | GKUI similar; a veces CarPlay de fábrica | **Parcial / variable** | Algunos traen CarPlay nativo; el script a veces no dispara hasta restaurar de fábrica ([XDA](https://xdaforums.com/t/guide-how-to-install-autokit-and-get-carplay-on-geely-coolray.4546127/)) |
+| **New Coolray / Coolray New 2025** | **Flyme Auto**, **Android 9**, unidad IHU624G | **No** | Otra plataforma: requiere ADB u otro método; APKs de Android 4 no aplican |
+
+### Checklist antes de instalar
+
+Pide al usuario que confirme en **Ajustes → Sistema → Acerca de**:
+
+- [ ] Interfaz **GKUI** (no Flyme Auto / Galaxy OS)
+- [ ] **Android 4.3** o **4.4** (no Android 9+)
+- [ ] Firmware compatible (p. ej. termina en `32`, `22`, `20`, `84`, `93` o `96`)
+
+Si tiene **New Coolray 2025** (Android 9, Flyme Auto), este paquete **no es compatible**. Necesitaría otro enfoque (ADB, APKs distintos, posiblemente otro proyecto de la comunidad).
+
+### Otros modelos Geely (Azkarra, Emgrand, etc.)
+
+**No probados** con este repo. Algunos comparten GKUI en Android 4, pero el exploit del Carlink Kit puede no existir. En modelos recientes (Monjaro, Atlas con GMCustoms/Flyme) el sistema suele estar más bloqueado.
+
+---
+
 ## Instalación paso a paso
 
 ### 1. Descargar el repositorio
