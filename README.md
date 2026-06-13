@@ -10,7 +10,9 @@ Paquete de instalación automática de **Android Auto** y utilidades para la rad
 
 Copias el contenido de este repo en un pendrive USB y la radio lo detecta al encender. Un script interno de la radio ejecuta `done.sh`, que instala las aplicaciones y reinicia el sistema. No hace falta root manual ni ADB.
 
-La app principal para Android Auto es **[Headunit Revived](https://github.com/andreknieriem/headunit-revived)** (v2.3.1), emulador open source de receptor Android Auto compatible con Android 4.1+.
+La app principal para **Android Auto** (teléfonos Android) es **[Headunit Revived](https://github.com/andreknieriem/headunit-revived)** (v2.3.1).
+
+Para **iPhone / Apple CarPlay**, la app correcta es **AutoKit** de Carlinkit (`AutoKit.apk`), que requiere un dongle USB adicional (ver sección [iPhone y CarPlay](#iphone-y-carplay)).
 
 ---
 
@@ -43,7 +45,6 @@ USB (FAT32)/
 ├── done.sh
 ├── headunitrevived231.apk
 ├── WifiManager.apk
-├── Carplay.apk
 ├── AutoKit.apk
 ├── BackButton.apk
 ├── homebutton.apk
@@ -82,19 +83,64 @@ pm install -rtdg /mnt/udisk2/TuApp.apk
 
 | APK | Descripción |
 |-----|-------------|
-| `headunitrevived231.apk` | **Headunit Revived v2.3.1** — emulador de Android Auto en la radio. App principal del paquete. |
-| `WifiManager.apk` | Gestión de WiFi en la radio. |
-| `Carplay.apk` | Conexión con iPhone (CarPlay). |
-| `AutoKit.apk` | Conexión con iPhone vía dongle (no probada). |
+| `headunitrevived231.apk` | **Headunit Revived v2.3.1** — Android Auto para teléfonos **Android** (por cable). |
+| `WifiManager.apk` | Gestión de WiFi en la radio (necesario para actualizar AutoKit). |
+| `AutoKit.apk` | **Carlinkit AutoKit** — Apple CarPlay para **iPhone**. Requiere dongle CCPW/CCPA (ver abajo). |
 | `BackButton.apk` | Botón "Atrás" flotante sobre Android Auto (pantalla completa). |
 | `homebutton.apk` | Mapeo de botones del volante; permite asignar un botón para abrir Android Auto. |
 | `droidinfo.apk` | Información del sistema Android de la radio. |
 
 ---
 
+## iPhone y CarPlay
+
+### ¿Qué app usar?
+
+| App | ¿Sirve para iPhone? | Notas |
+|-----|---------------------|-------|
+| **`AutoKit.apk`** | **Sí** | App oficial de Carlinkit. Es la solución usada en la comunidad del Coolray. |
+| `headunitrevived231.apk` | No | Solo Android Auto (teléfonos Android). |
+| ~~`Carplay.apk`~~ | **No** | Era `com.oslotech.applecar`: una app de terceros con nombre engañoso, **no** implementa CarPlay. Fue eliminada del paquete. |
+
+### Hardware necesario (obligatorio)
+
+AutoKit **no funciona solo con el cable del iPhone**. Necesitas un dongle **Carlinkit** compatible:
+
+| Dongle | ¿Funciona? |
+|--------|------------|
+| **CCPW** (wireless) | Sí — el más usado en Coolray |
+| **CCPA** (wireless) | Sí |
+| CP2A, TBox, AI Box Android 13 | **No** con AutoKit en Coolray pre-facelift |
+
+Puedes comprarlo en AliExpress, Amazon o tiendas locales. Busca modelos **CCPW** o **CCPA** para pantallas Android aftermarket.
+
+### Versión de AutoKit incluida
+
+El `AutoKit.apk` del repo (~9,6 MB) corresponde a la versión oficial **`2025.03.19.1126`**, que es la más reciente publicada por Carlinkit al momento de armar este paquete. Descarga alternativa: [Carlinkit — AutoKit](https://cn.carlinkit.com/download_back.html).
+
+### Configuración recomendada (iPhone)
+
+1. Instala el paquete con el pendrive (como en la sección de instalación).
+2. Conecta la radio a **WiFi** con WifiManager (AutoKit puede pedir actualizarse).
+3. Abre **AutoKit** en la radio y completa la prueba de entorno si la muestra.
+4. En el iPhone: activa **Siri** (Ajustes → Siri).
+5. Inserta el dongle Carlinkit en el **puerto USB del conductor** (no el del pendrive de instalación).
+6. Conexión:
+   - **Con cable:** iPhone → dongle → USB del coche.
+   - **Inalámbrica:** empareja el Bluetooth del iPhone con la señal **AutoKit** del dongle.
+
+### Referencias de la comunidad
+
+- [Guía XDA — AutoKit en Geely Coolray](https://xdaforums.com/t/guide-how-to-install-autokit-and-get-carplay-on-geely-coolray.4546127/)
+- [Telegram — Geely CarPlay SA](https://t.me/GeelyCarplaySA)
+- [FAQ oficial AutoKit (Carlinkit)](https://carlinkitcarplay.com/pages/faq-en-autokit-for-aftermarket-android-screen-cars-version1-0)
+
+---
+
 ## Notas
 
-- Android Auto por **cable USB** funciona correctamente. El modo **Bluetooth** aún está en pruebas.
+- **Android (Google):** Headunit Revived por **cable USB** funciona correctamente. Bluetooth aún en pruebas.
+- **iPhone (Apple):** CarPlay vía **AutoKit + dongle Carlinkit CCPW/CCPA**. Sin dongle no hay CarPlay nativo en esta radio.
 - Para **desinstalar**, lo más seguro es restaurar la radio a **ajustes de fábrica** desde el menú de configuración.
 - La radio usa **Android 4**; solo instala APKs compatibles con esa versión.
 
@@ -148,7 +194,6 @@ mount -o remount,rw /system /system
 #Install apks
 pm install -rtdg /mnt/udisk2/headunitrevived231.apk
 pm install -rtdg /mnt/udisk2/WifiManager.apk
-pm install -rtdg /mnt/udisk2/Carplay.apk
 pm install -rtdg /mnt/udisk2/AutoKit.apk
 pm install -rtdg /mnt/udisk2/BackButton.apk
 pm install -rtdg /mnt/udisk2/homebutton.apk
