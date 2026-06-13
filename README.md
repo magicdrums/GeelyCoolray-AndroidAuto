@@ -2,6 +2,8 @@ Comprame un cafe! :-D [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](http
 
 # GeelyCoolray-AndroidAuto
 
+> **Rama `beta`** — Esta rama prueba **[Headunit Revived v3.0.0-beta2](https://github.com/andreknieriem/headunit-revived/releases/tag/v.3.0.0-beta2)** (pre-release). Para uso estable, usa la rama [`main`](https://github.com/magicdrums/GeelyCoolray-AndroidAuto/tree/main) con v2.3.1.
+
 Paquete de instalación automática de **Android Auto** y utilidades para la radio del **Geely Coolray** (firmware `05.07.06000.h50.00032`, Android 4).
 
 ---
@@ -10,7 +12,7 @@ Paquete de instalación automática de **Android Auto** y utilidades para la rad
 
 Copias el contenido de este repo en un pendrive USB y la radio lo detecta al encender. Un script interno de la radio ejecuta `done.sh`, que instala las aplicaciones y reinicia el sistema. No hace falta root manual ni ADB.
 
-La app principal para **Android Auto** (teléfonos Android) es **[Headunit Revived](https://github.com/andreknieriem/headunit-revived)** (v2.3.1).
+La app principal para **Android Auto** (teléfonos Android) es **[Headunit Revived](https://github.com/andreknieriem/headunit-revived)** **v3.0.0-beta2** (pre-release en esta rama).
 
 Para **iPhone / Apple CarPlay**, la app correcta es **AutoKit** de Carlinkit (`AutoKit.apk`), que requiere un dongle USB adicional (ver sección [iPhone y CarPlay](#iphone-y-carplay)).
 
@@ -28,7 +30,7 @@ Para **iPhone / Apple CarPlay**, la app correcta es **AutoKit** de Carlinkit (`A
 
 ### 1. Descargar el repositorio
 
-En GitHub, pulsa **Code → Download ZIP** y descomprime el archivo en tu PC.
+En GitHub, selecciona la rama **`beta`**, pulsa **Code → Download ZIP** y descomprime el archivo en tu PC.
 
 ### 2. Preparar el pendrive
 
@@ -43,7 +45,7 @@ La estructura en el pendrive debe verse así:
 ```
 USB (FAT32)/
 ├── done.sh
-├── headunitrevived231.apk
+├── headunitrevived300beta2.apk
 ├── WifiManager.apk
 ├── AutoKit.apk
 ├── BackButton.apk
@@ -83,12 +85,24 @@ pm install -rtdg /mnt/udisk2/TuApp.apk
 
 | APK | Descripción |
 |-----|-------------|
-| `headunitrevived231.apk` | **Headunit Revived v2.3.1** — Android Auto para teléfonos **Android** (por cable). |
+| `headunitrevived300beta2.apk` | **Headunit Revived v3.0.0-beta2** — Android Auto para teléfonos **Android** (pre-release). |
 | `WifiManager.apk` | Gestión de WiFi en la radio (necesario para actualizar AutoKit). |
 | `AutoKit.apk` | **Carlinkit AutoKit** — Apple CarPlay para **iPhone**. Requiere dongle CCPW/CCPA (ver abajo). |
 | `BackButton.apk` | Botón "Atrás" flotante sobre Android Auto (pantalla completa). |
 | `homebutton.apk` | Mapeo de botones del volante; permite asignar un botón para abrir Android Auto. |
 | `droidinfo.apk` | Información del sistema Android de la radio. |
+
+### Novedades de Headunit Revived v3.0.0-beta2 (vs v2.3.1)
+
+- Pantalla de carga personalizable (imagen/GIF/video)
+- Exportar/importar configuración
+- QR para conexión inalámbrica
+- Lista blanca USB (no interrumpe iPhone u otros dispositivos)
+- Modo nocturno por señal de luces del coche (ILL+)
+- APK más liviano (~9 MB vs ~14 MB)
+- Librería SSL antigua eliminada (mejor mantenimiento)
+
+Release: [v.3.0.0-beta2](https://github.com/andreknieriem/headunit-revived/releases/tag/v.3.0.0-beta2)
 
 ---
 
@@ -99,7 +113,7 @@ pm install -rtdg /mnt/udisk2/TuApp.apk
 | App | ¿Sirve para iPhone? | Notas |
 |-----|---------------------|-------|
 | **`AutoKit.apk`** | **Sí** | App oficial de Carlinkit. Es la solución usada en la comunidad del Coolray. |
-| `headunitrevived231.apk` | No | Solo Android Auto (teléfonos Android). |
+| `headunitrevived300beta2.apk` | No | Solo Android Auto (teléfonos Android). |
 | ~~`Carplay.apk`~~ | **No** | Era `com.oslotech.applecar`: una app de terceros con nombre engañoso, **no** implementa CarPlay. Fue eliminada del paquete. |
 
 ### Hardware necesario (obligatorio)
@@ -139,7 +153,8 @@ El `AutoKit.apk` del repo (~9,6 MB) corresponde a la versión oficial **`2025.03
 
 ## Notas
 
-- **Android (Google):** Headunit Revived por **cable USB** funciona correctamente. Bluetooth aún en pruebas.
+- **Rama beta:** v3.0.0-beta2 puede tener inestabilidades. Si algo falla, vuelve a la rama `main` (v2.3.1 estable).
+- **Android (Google):** Headunit Revived por **cable USB** funciona correctamente en `main`. En `beta` aún en pruebas.
 - **iPhone (Apple):** CarPlay vía **AutoKit + dongle Carlinkit CCPW/CCPA**. Sin dongle no hay CarPlay nativo en esta radio.
 - Para **desinstalar**, lo más seguro es restaurar la radio a **ajustes de fábrica** desde el menú de configuración.
 - La radio usa **Android 4**; solo instala APKs compatibles con esa versión.
@@ -192,7 +207,7 @@ export PATH=/sbin:/system/sbin:/system/xbin:/system/bin
 mount -o remount,rw /system /system
 
 #Install apks
-pm install -rtdg /mnt/udisk2/headunitrevived231.apk
+pm install -rtdg /mnt/udisk2/headunitrevived300beta2.apk
 pm install -rtdg /mnt/udisk2/WifiManager.apk
 pm install -rtdg /mnt/udisk2/AutoKit.apk
 pm install -rtdg /mnt/udisk2/BackButton.apk
