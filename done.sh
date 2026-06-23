@@ -20,7 +20,7 @@ export PATH=/sbin:/system/sbin:/system/xbin:/system/bin
 mount -o remount,rw /system /system
 
 #Install apks
-pm install -rtdg /mnt/udisk2/headunitrevived231.apk
+pm install -rtdg /mnt/udisk2/headunitrevived300.apk
 pm install -rtdg /mnt/udisk2/WifiManager.apk
 pm install -rtdg /mnt/udisk2/AutoKit.apk
 pm install -rtdg /mnt/udisk2/BackButton.apk
