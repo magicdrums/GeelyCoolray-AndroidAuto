@@ -2,7 +2,7 @@ Comprame un cafe! :-D [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](http
 
 # GeelyCoolray-AndroidAuto
 
-> **Rama `beta`** — Esta rama prueba **[Headunit Revived v3.0.1-alpha](https://github.com/andreknieriem/headunit-revived/releases/tag/v.3.0.1-alpha)** (pre-release). Para uso estable, usa la rama [`main`](https://github.com/magicdrums/GeelyCoolray-AndroidAuto/tree/main) con v3.0.0.
+> **Rama `beta`** — Esta rama prueba **[Headunit Revived v3.0.1-alpha](https://github.com/andreknieriem/headunit-revived/releases/tag/v.3.0.1-alpha)** (pre-release). Para uso estable, usa la rama [`main`](https://github.com/magicdrums/GeelyCoolray-AndroidAuto/tree/main) con v3.1.0.
 
 Paquete de instalación automática de **Android Auto** y utilidades para la radio del **Geely Coolray** (firmware `05.07.06000.h50.00032`, Android 4).
 
@@ -130,7 +130,7 @@ pm install -rtdg /mnt/udisk2/TuApp.apk
 
 ### Novedades de Headunit Revived v3.0.x
 
-Esta rama sigue la línea **v3.0** del proyecto upstream. La rama `main` incluye **v3.0.0** (estable); aquí se prueba **v3.0.1-alpha** antes de su publicación final.
+Esta rama sigue la línea **v3.0** del proyecto upstream. La rama `main` incluye **v3.1.0** (estable); aquí se prueba **v3.0.1-alpha** antes de su publicación final.
 
 Características principales de la serie v3.0 (respecto a v2.3.1):
 
@@ -193,7 +193,7 @@ El `AutoKit.apk` del repo (~9,6 MB) corresponde a la versión oficial **`2025.03
 
 ## Notas
 
-- **Rama beta:** v3.0.1-alpha puede tener inestabilidades. Si algo falla, vuelve a la rama `main` (v3.0.0 estable).
+- **Rama beta:** v3.0.1-alpha puede tener inestabilidades. Si algo falla, vuelve a la rama `main` (v3.1.0 estable).
 - **Android (Google):** Headunit Revived por **cable USB** funciona correctamente en `main`. En `beta` aún en pruebas.
 - **iPhone (Apple):** CarPlay vía **AutoKit + dongle Carlinkit CCPW/CCPA**. Sin dongle no hay CarPlay nativo en esta radio.
 - Para **desinstalar**, lo más seguro es restaurar la radio a **ajustes de fábrica** desde el menú de configuración.
